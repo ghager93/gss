@@ -1,6 +1,6 @@
 function [E] = fE(Ryy)
 %E = Ryy - diag(Ryy)
-[F, numFrames, M, ~] = size(ryy);
+[F, numFrames, M, ~] = size(Ryy);
 
 E = Ryy;
     for i = 1:M

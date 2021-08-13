@@ -1,17 +1,18 @@
 function [delJ] = fDelJ2(W, Rxx, alpha)
 % Derivative of cost function J(W) with respect to W -> dJ(W)/d(W(omega))
 [F,M,N] = size(W);
-N_frame = size(Rxx, 2);
+numFrames = size(Rxx, 2);
 
-Ryy = fRyy(W, Rxx)
+Ryy = fRyy(W, Rxx);
+E = fE(Ryy);
 
-delJ = zeros(F,M,N);
-for t = 1:N_frame
-    delJ = delJ + multiprod(multiprod( ...
-        squeeze(E(:,t,:,:)),W,[2 3]), squeeze(Rxx(:,t,:,:)), [2 3]);
-    
-end
+E = reshape(E, [F * numFrames M M]);
+Rxx = reshape(Rxx, [F * numFrames N N]);
 
-delJ = 4*alpha.*delJ/N_frame;
+W_rep = repmat(W, [numFrames 1]);
+
+delJ = squeeze(sum(reshape(multiprod(multiprod(E, W_rep, [2 3]), Rxx, [2 3]), [F numFrames M N]), 2));
+
+delJ = 4*alpha.*delJ/numFrames;
 end
 

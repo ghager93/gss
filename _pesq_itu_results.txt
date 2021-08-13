@@ -1,0 +1,21 @@
+REFERENCE	 DEGRADED	 PESQMOS	 PESQMOS	 SUBJMOS	 COND	 SAMPLE_FREQ	 CRUDE_DELAY
+s1.wav	 iy1.wav	 SQValue=3.466	 3.466	 0.000	 0	 16000	-0.0080
+ s2.wav	 iy2.wav	 SQValue=3.269	 3.269	 0.000	 0	 16000	-0.0080
+ s2.wav	 s2.wav	 SQValue=4.500	 4.500	 0.000	 0	 16000	0.0000
+ s1.wav	 iy10.wav	 SQValue=2.382	 2.382	 0.000	 0	 16000	-0.0080
+ s2.wav	 iy20.wav	 SQValue=1.485	 1.485	 0.000	 0	 16000	-0.0080
+ tests/M_2_Th1_1_Th2_30__2019-04-08T144606/s1.wav	 tests/M_2_Th1_1_Th2_30__2019-04-08T144606/iy_false_1.wav	 SQValue=2.516	 2.516	 0.000	 0	 16000	-0.0040
+ tests/M_2_Th1_1_Th2_30__2019-04-08T144606/s1.wav	 tests/M_2_Th1_1_Th2_30__2019-04-08T144606/iy1_1.wav	 SQValue=3.466	 3.466	 0.000	 0	 16000	-0.0080
+ tests/M_2_Th1_1_Th2_30__2019-04-08T144606/s1.wav	 tests/M_2_Th1_1_Th2_30__2019-04-08T144606/iyg_false_1.wav	 SQValue=2.515	 2.515	 0.000	 0	 16000	-0.0040
+ tests/M_2_Th1_1_Th2_30__2019-04-08T144606/s1.wav	 tests/M_2_Th1_1_Th2_30__2019-04-08T144606/iy_false_1.wav	 SQValue=2.516	 2.516	 0.000	 0	 16000	-0.0040
+ tests/M_2_Th1_1_Th2_30__2019-04-08T144606/s2.wav	 tests/M_2_Th1_1_Th2_30__2019-04-08T144606/iy_false_2.wav	 SQValue=2.097	 2.097	 0.000	 0	 16000	-0.0040
+ tests/M_2_Th1_1_Th2_30__2019-04-08T144606/s2.wav	 tests/M_2_Th1_1_Th2_30__2019-04-08T144606/iyg_false_2.wav	 SQValue=1.256	 1.256	 0.000	 0	 16000	-0.0040
+ tests/M_2_Th1_1_Th2_30__2019-04-08T212841/s1.wav	 tests/M_2_Th1_1_Th2_30__2019-04-08T212841/iy1_1.wav	 SQValue=3.466	 3.466	 0.000	 0	 16000	-0.0080
+ tests/M_2_Th1_1_Th2_30__2019-04-08T212841/s1.wav	 tests/M_2_Th1_1_Th2_30__2019-04-08T212841/iy_false_1.wav	 SQValue=2.925	 2.925	 0.000	 0	 16000	-0.0080
+ tests/M_2_Th1_1_Th2_30__2019-04-08T212841/s1.wav	 tests/M_2_Th1_1_Th2_30__2019-04-08T212841/iyg_false_1.wav	 SQValue=2.544	 2.544	 0.000	 0	 16000	-0.0080
+ tests/M_2_Th1_1_Th2_30__2019-04-08T212841/s1.wav	 tests/M_2_Th1_1_Th2_30__2019-04-08T212841/iy_false_1.wav	 SQValue=2.925	 2.925	 0.000	 0	 16000	-0.0080
+ tests/M_2_Th1_1_Th2_30__2019-04-08T212841/s1.wav	 tests/M_2_Th1_1_Th2_30__2019-04-08T212841/iyg_false_1.wav	 SQValue=2.544	 2.544	 0.000	 0	 16000	-0.0080
+ tests/M_2_Th1_1_Th2_30__2019-04-08T212841/s1.wav	 tests/M_2_Th1_1_Th2_30__2019-04-08T212841/iy1_1.wav	 SQValue=3.466	 3.466	 0.000	 0	 16000	-0.0080
+ tests\M_2_Th1_1_Th2_30__2019-04-08T212841\s1.wav	 tests\M_2_Th1_1_Th2_30__2019-04-08T212841\iy1_1.wav	 SQValue=3.466	 3.466	 0.000	 0	 16000	-0.0080
+ tests\M_2_Th1_1_Th2_30__2019-04-08T212841\s2.wav	 tests\M_2_Th1_1_Th2_30__2019-04-08T212841\iy1_2.wav	 SQValue=3.269	 3.269	 0.000	 0	 16000	-0.0080
+ 

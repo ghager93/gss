@@ -7,6 +7,15 @@ classdef gssleastsquares
         numSensors
         numFreqBins
         W0
+        
+        stepVector
+        
+        Ryy
+        C2
+        J
+        JC2
+        delJ
+        delJC2
     end
     
     properties(Access = private)
@@ -52,28 +61,43 @@ classdef gssleastsquares
             obj.sourceEye = permute(repmat(eye(obj.numSources), [1,1,F]), [3 1 2]);
         end
         
+        function obj = step(obj)
+            %METHOD1 Summary of this method goes here
+            %   Detailed explanation goes here
+            
+            obj.W = obj.W - obj.stepSize * obj.stepVector;
+        end
+        
         function val = get.W0(obj)
             val = permute(conj(obj.D.steeringMatrix), [1 3 2]);
         end
         
-        function sV = stepVector(obj)
-            Ryy = fRyy(obj.W, obj.Rxx);
-            C2 = fC2_2(obj.W, obj.D.steeringMatrix, obj.sourceEye);
-            delJ = fdelJ2(obj.W, obj.Rxx, obj.alpha);
-            delJC2;
-            
+        function sV = get.stepVector(obj)
+            sV = obj.delJ + obj.delJC2;
         end
         
-        function dJ = delJ(obj)
-            Ryy = fRyy(obj.W, obj.Rxx)
-            
-        
-        function step(obj)
-            %METHOD1 Summary of this method goes here
-            %   Detailed explanation goes here
-            
-            obj.W = obj.W - obj.stepSize * (delJ + delJC2);
+        function val = get.Ryy(obj)
+            val = fRyy3(obj.W, obj.Rxx);
         end
-    end
+        
+        function val = get.C2(obj)
+            val = fC2_2(obj.W, obj.D.steeringMatrix, obj.sourceEye);
+        end
+        
+        function val = get.J(obj)
+            val = fJ2(obj.Ryy, obj.alpha);
+        end
+        
+        function val = get.JC2(obj)
+            val = fJC2(obj.C2);
+        end
+        
+        function val = get.delJ(obj)
+            val = fdelJ2(obj.W, obj.Rxx, obj.alpha);
+        end
+        
+        function val = get.delJC2(obj)
+            val = fdelJC2_2(obj.D, obj.C2);
+        end
 end
 

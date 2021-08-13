@@ -3,7 +3,7 @@ function [delJ] = fDelJ2(W, Rxx, alpha)
 [F,M,N] = size(W);
 numFrames = size(Rxx, 2);
 
-Ryy = fRyy(W, Rxx);
+Ryy = fRyy3(W, Rxx);
 E = fE(Ryy);
 
 E = reshape(E, [F * numFrames M M]);

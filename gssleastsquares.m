@@ -59,7 +59,7 @@ classdef gssleastsquares
         function sV = stepVector(obj)
             Ryy = fRyy(obj.W, obj.Rxx);
             C2 = fC2_2(obj.W, obj.D.steeringMatrix, obj.sourceEye);
-            delJ = 
+            delJ = fdelJ2(obj.W, obj.Rxx, obj.alpha);
             delJC2;
             
         end
